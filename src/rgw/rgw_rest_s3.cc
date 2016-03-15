@@ -3790,6 +3790,7 @@ int RGW_Auth_S3::authorize_v2(RGWRados *store, struct req_state *s)
 
     dout(15) << "calculated digest=" << digest << dendl;
     dout(15) << "auth_sign=" << auth_sign << dendl;
+    dout(15) << "auth_id=" << auth_id << dendl;
     dout(15) << "compare=" << auth_sign.compare(digest) << dendl;
 
     if (auth_sign != digest) {
